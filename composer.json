@@ -27,11 +27,5 @@
             "src/bootstrap.php",
             "src/defineCommands.php"
         ]
-    },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../discord"
-        }
-    ]
+    }
 }
