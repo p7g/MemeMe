@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c9a97136d45484471f50911a5626fb07",
+    "content-hash": "a72498c239b46e54be2f179f19d83c06",
     "packages": [
         {
             "name": "amphp/amp",
@@ -1384,11 +1384,16 @@
         {
             "name": "p7g/discord.php",
             "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/p7g/discord.php.git",
+                "reference": "e5ff3d943bd66dbe7b5a91d295a2ddf2e053de0b"
+            },
             "dist": {
-                "type": "path",
-                "url": "../discord",
-                "reference": "c12e6d6d5ab7ceddd40bd8dacad66662645fc360",
-                "shasum": null
+                "type": "zip",
+                "url": "https://api.github.com/repos/p7g/discord.php/zipball/e5ff3d943bd66dbe7b5a91d295a2ddf2e053de0b",
+                "reference": "e5ff3d943bd66dbe7b5a91d295a2ddf2e053de0b",
+                "shasum": ""
             },
             "require": {
                 "amphp/amp": "^2.0",
@@ -1420,13 +1425,10 @@
                     "src/Utility/cast.php"
                 ]
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "p7g\\Discord\\Test\\": "test"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "description": "Asynchronous Discord client for PHP",
-            "homepage": "https://github.com/p7g/discord.php"
+            "homepage": "https://github.com/p7g/discord.php",
+            "time": "2018-12-09T19:26:51+00:00"
         },
         {
             "name": "psr/log",
