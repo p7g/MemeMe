@@ -136,7 +136,6 @@ function bootstrap() {
           return;
         }
         $rawPerms = $getopt->getOperand('permission');
-        MemeMe::$client->send($channel_id, print_r($rawPerms, true));
         if ($rawPerms === null) {
           $rawId = $getopt->getOperand('user');
           if ($rawId === null) {
