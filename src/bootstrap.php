@@ -177,13 +177,6 @@ function bootstrap() {
             MemeMe::$client->send($channel_id, "<@$author> Invalid user ID");
             return;
           }
-          else if ($user_id === $author) {
-            MemeMe::$client->send(
-              $channel_id,
-              "<@$author> Don't change your own perms"
-            );
-            return;
-          }
           if (!\preg_match('~^(admin|mod|user|none)$~i', $rawPerms)) {
             MemeMe::$client->send(
               $channel_id,
