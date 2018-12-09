@@ -29,7 +29,6 @@ function bootstrap() {
     $len = \mb_strlen(MemeMe::$mention);
     if (\strncmp($message->content, MemeMe::$mention, $len) !== 0) {
       $mention = MemeMe::$mention;
-      MemeMe::$logger->debug("No mention of $mention in $message->content");
       return;
     }
 
