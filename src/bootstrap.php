@@ -335,7 +335,7 @@ function bootstrap() {
 }
 
 function parseUserId(?string $str): ?string {
-  \preg_match('~^<@([^>]+)>|(\d+)$~', $str ?: '', $matches);
+  \preg_match('~^<@!?([^>]+)>|(\d+)$~', $str ?: '', $matches);
   return $matches[1] ?? $matches[2] ?? null;
 }
 
