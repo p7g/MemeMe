@@ -97,7 +97,6 @@ function bootstrap() {
           $channel = getChannel($channelToChange);
           if ($channel === null) {
             addChannel($channelToChange);
-            addPermissions($author, $channelToChange, Permission::ADMIN);
           }
           else {
             $channel->enabled = true;
