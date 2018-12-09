@@ -184,21 +184,25 @@ function bootstrap() {
             );
             return;
           }
-          $authorPerms = getPermissions(
-            $author,
-            $message->guild_id
-          )->permissions;
           $perms = 0;
           switch (\mb_strtolower($rawPerms)) {
             case 'admin':
-              if ($authorPerms !== Permission::ADMIN) {
+              if (!hasPermission(
+                $message->guild_id,
+                $author,
+                Permission::ADMIN
+              )) {
                 notPermitted($channel_id, $author);
                 return;
               }
               $perms = Permission::ADMIN;
               break;
             case 'mod':
-              if ($authorPerms !== Permission::ADMIN) {
+              if (!hasPermission(
+                $message->guild_id,
+                $author,
+                Permission::ADMIN
+              )) {
                 notPermitted($channel_id, $author);
                 return;
               }
