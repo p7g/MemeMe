@@ -1,0 +1,37 @@
+{
+    "name": "p7g/mememe",
+    "description": "Meme generator Discord bot",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Patrick Gingras",
+            "email": "775.pg.12@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "p7g/discord.php": "dev-master",
+        "monolog/monolog": "^1.24",
+        "amphp/amp": "^2.0",
+        "robmorgan/phinx": "dev-master",
+        "morris/lessql": "dev-master",
+        "symfony/dotenv": "^4.3@dev",
+        "ulrichsg/getopt-php": "dev-master",
+        "sentry/sentry": "^1.11@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "p7g\\MemeMe\\": "src"
+        },
+        "files": [
+            "src/bootstrap.php",
+            "src/defineCommands.php"
+        ]
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../discord"
+        }
+    ]
+}
