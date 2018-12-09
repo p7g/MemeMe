@@ -147,6 +147,13 @@ function bootstrap() {
             }
           }
           $perms = getPermissions($user_id, $message->guild_id);
+          if ($perms === null) {
+            $perms = addPermissions(
+              $user_id,
+              $message->guild_id,
+              Permission::USER
+            );
+          }
           $level = '';
           switch ($perms->permissions) {
             case Permission::ADMIN:
