@@ -337,7 +337,13 @@ function bootstrap() {
 
 function parseUserId(?string $str): ?string {
   \preg_match('~^<@!?([^>]+)>$|^(\d+)$~', $str ? \trim($str) : '', $matches);
-  return $matches[1] ?? $matches[2] ?? null;
+  if (!empty($matches[1])) {
+    return $matches[1];
+  }
+  if (!empty($matches[2])) {
+    return $matches[2];
+  }
+  return null;
 }
 
 function isEnabled(string $channel_id): bool {
