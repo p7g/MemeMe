@@ -97,7 +97,7 @@ function getGenCommand(): Command {
   $firstTextOperand = Operand::create('firstText', Operand::REQUIRED)
     ->setDescription('The text that goes at the top');
 
-  $secondTextOperand = Operand::create('secondText', Operand::REQUIRED)
+  $secondTextOperand = Operand::create('secondText', Operand::OPTIONAL)
     ->setDescription('The text that goes at the bottom');
 
   $command->addOperands([
