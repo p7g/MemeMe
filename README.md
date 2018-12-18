@@ -7,8 +7,10 @@ Discord bot that generates memes, built using [p7g/discord.php](https://github.c
 To run this, you will need:
 - PHP 7.1 or higher
 - composer
-- the sqlite driver for PHP
-- mbstring PHP extension
+- php_pdo_sqlite
+- php_curl
+- php_mbstring
+- maybe php_openssl
 
 To avoid insane CPU usage, install the `event` extension for PHP as well.
 
@@ -22,6 +24,7 @@ cd MemeMe
 
 Migrate the database:
 ```bash
+mkdir data
 ./vendor/bin/phinx migrate -e production
 ```
 
