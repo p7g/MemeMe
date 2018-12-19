@@ -304,7 +304,7 @@ function bootstrap() {
           }
         }
         $type = memeEncode($getopt->getOperand('type'));
-        $first = memeEncode($getopt->getOperand('firstText')) ?: '_';
+        $first = memeEncode($getopt->getOperand('firstText') ?: '_') ?: '_';
         $second = memeEncode($getopt->getOperand('secondText') ?: '') ?: '_';
         MemeMe::$client->send(
           $channel_id,

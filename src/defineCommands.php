@@ -94,7 +94,7 @@ function getGenCommand(): Command {
   $typeOperand = Operand::create('type', Operand::REQUIRED)
     ->setDescription('The type of meme to generate');
 
-  $firstTextOperand = Operand::create('firstText', Operand::REQUIRED)
+  $firstTextOperand = Operand::create('firstText', Operand::OPTIONAL)
     ->setDescription('The text that goes at the top');
 
   $secondTextOperand = Operand::create('secondText', Operand::OPTIONAL)
